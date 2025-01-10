@@ -24,3 +24,38 @@ qa-auto-bdd/
 ├── package-lock.json             # Ensures dependency version consistency
 ├── README.md                     # Project documentation
 └── .gitignore                    # Files and directories to exclude from
+
+
+## Installation
+
+To get started with this project, you need to have the following installed:
+
+1. **Node.js** (v16.16.0 or later): Download and install it from [nodejs.org](https://nodejs.org/).
+2. **Git**: Download and install it from [git-scm.com](https://git-scm.com/).
+
+Once you have Node.js and Git installed, follow these steps:
+
+1. Clone the repository:
+
+    git clone https://github.com/NelWebDev/qa-bdd-nodejs.git
+    cd your-repository-name
+
+2. Install dependencies using npm:
+
+    npm install
+
+## Running the Project
+
+To launch the local server for testing (assuming you are running the website locally with Docker on `http://localhost:3001/`), follow these steps:
+
+1. If you're using Docker, ensure that the container is running the web application (t-shirt store).
+2. Open the web application in Chrome and make sure it is accessible at [http://localhost:3001]
+
+Make sure the website is up and running before executing the tests.
+
+## Running Tests
+
+To run the tests, use the following command:
+
+npx cucumber-js
+
