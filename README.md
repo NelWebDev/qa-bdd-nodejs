@@ -1,30 +1,29 @@
 # QA Automation with BDD in Node.js
 
-This project is a QA automation framework built with Node.js using BDD (Behavior-Driven Development) principles. It leverages Cucumber.js and Puppeteer to perform automated tests on a local t-shirt store application running at `http://localhost:3001`.
+This project is a QA automation framework using Node.js, Cucumber.js, and Puppeteer for BDD (Behavior-Driven Development) testing. It interacts with a local t-shirt store application hosted at `http://localhost:3001`.
 
 ## Features
-
-- BDD with Gherkin syntax for clear and readable test scenarios.
-- Puppeteer for browser automation and interaction.
-- Test cases for core functionalities:
-  - Verifying the website's title.
-  - Filtering t-shirts by size.
-  - Adding items to the shopping cart.
-  - Removing items from the shopping cart.
+- **Clear Gherkin-syntax** for BDD test scenarios.
+- **Puppeteer integration** for browser automation.
+- **Reusable Page Objects** for selectors and actions.
+- Comprehensive tests:
+  - Verify website title.
+  - Filter t-shirts by size.
+  - Add and remove items from the cart.
 
 ## Project Structure
-
 ```plaintext
 qa-auto-bdd/
-├── features/                     # Contains Gherkin feature files and step definitions
-│   ├── web-title.feature         # Feature file for scenarios
-│   └── steps_definitions/        # Step definitions for the feature file
-│       └── web-title.steps.js
-├── package.json                  # Project metadata and dependencies
-├── package-lock.json             # Ensures dependency version consistency
+├── features/                     # Gherkin feature files and step definitions
+│   ├── web-title.feature         # Feature scenarios
+│   ├── pageObjects/              # Page Object models
+│   │   └── TShirtPage.js         # Actions and selectors for the t-shirt page
+│   ├── steps_definitions/        # Step definitions
+│   │   └── web-title.steps.js    # Steps implementing scenarios
+├── config.js                     # Configuration for URL and shared constants
+├── package.json                  # Project metadata
 ├── README.md                     # Project documentation
-└── .gitignore                    # Files and directories to exclude from
-
+└── .gitignore                    # Files to exclude
 
 ## Installation
 
